@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BankoGame {
@@ -6,7 +7,7 @@ public class BankoGame {
 
         BankoBoardGenerator bbg = new BankoBoardGenerator();
         ArrayList<Integer> bankoBoards = new ArrayList<>(bbg.bankNumbersGenerator(50));
-        ArrayList<Boolean> bankoBoardCheck = new ArrayList<>(bankoBoards.size());
+        ArrayList<Boolean> bankoBoardCheck = new ArrayList<>(Collections.nCopies(bankoBoards.size(), false));
         Scanner sc = new Scanner(System.in);
         boolean success = false;
 
@@ -15,7 +16,13 @@ public class BankoGame {
                 String entry = sc.next();
                 Integer.parseInt(entry);
 
-
+                if(bankoBoards.contains(Integer.parseInt(entry))){
+                    for(int i = 0; i < bankoBoards.size(); i++){
+                        if(bankoBoards.get(i).equals(Integer.parseInt(entry))){
+                            bankoBoardCheck.set(i, true);
+                        }
+                    }
+                }
 
             }catch(NumberFormatException NFE){
                 System.out.println("That is not a number.");

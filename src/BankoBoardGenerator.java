@@ -32,6 +32,7 @@ public class BankoBoardGenerator {
                for(int j = 1; j <= 15; j++){
                    bankoBoard.remove(bankoBoard.size()-1);
                }
+               counter = 0;
            }
         }
         return bankoBoard;

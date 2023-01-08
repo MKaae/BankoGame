@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b04fc63-1400-4e04-9bca-74858d796518" name="Changes" comment="BankoBoardGen Complete">
+    <list default="true" id="3b04fc63-1400-4e04-9bca-74858d796518" name="Changes" comment="gamepart loop added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BankoBoardGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankoBoardGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BankoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankoGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673119960452</updated>
       <workItem from="1673119961679" duration="131000" />
-      <workItem from="1673184300803" duration="4667000" />
+      <workItem from="1673184300803" duration="5694000" />
     </task>
     <task id="LOCAL-00001" summary="FirstIteration">
       <created>1673120038537</created>
@@ -61,7 +62,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673188487754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gamepart loop added">
+      <created>1673189039522</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673189039522</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,7 +89,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FirstIteration" />
     <MESSAGE value="BankoBoardGen Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="BankoBoardGen Complete" />
+    <MESSAGE value="gamepart loop added" />
+    <option name="LAST_COMMIT_MESSAGE" value="gamepart loop added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
