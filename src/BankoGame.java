@@ -29,15 +29,6 @@ public class BankoGame {
             }
         }
     }
-    public boolean fiveConsecutive(){
-        return true;
-    }
-    public boolean tenConsecutive(){
-        return true;
-    }
-    public boolean fifteenConsecutive(){
-        return true;
-    }
 }
 /*When the game begins everyone has empty plates.
 The Caller randomly draws a number and tells it loud and clear.
