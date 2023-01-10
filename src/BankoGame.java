@@ -37,15 +37,20 @@ public class BankoGame implements CheckingForWins{
                             }
                         }
                         System.out.println(bankoBoardCheck);
+                        break;
                     case 2:
                         System.out.println("Enter caller ID.");
                         int callerID = Integer.parseInt(sc.next());
                         boolean winner = bg.checkBooleans(callerID, bankoBoardCheck);
                         if(winner){
                             System.out.println(callerID + " is a winner.");
+                            break;
                         }
+                        System.out.println("Not a winner.");
+                        break;
                     case 3:
                         success = true;
+                        break;
                 }
                 }catch(NumberFormatException NFE){
                     System.out.println("That is not a number.");
@@ -57,21 +62,26 @@ public class BankoGame implements CheckingForWins{
         System.out.println("Check for how many numbers of rows [1], [2], [3]");
         Scanner sc = new Scanner(System.in);
         boolean success = false;
-        boolean winner = false;
+        boolean winner = true;
+        int counter = 0;
         int plateID = callerID*15;
         boolean[] plateNumbers = new boolean[15];
-        for(int i = plateID; i < plateID+15; i++){
-            plateNumbers[i] = list.get(i);
+        for(int i = plateID; i <= plateID+14; i++){
+                plateNumbers[counter] = list.get(i);
+                counter++;
+        }
+        for (boolean plateNumber : plateNumbers) {
+            System.out.print(plateNumber);
         }
         while(!success) {
             try {
                 int select = Integer.parseInt(sc.next());
                 switch(select){
                     case 1:
-                        for(int i = 0; i <= plateNumbers.length; i = i+5){
-                            for(int j = 0; j < i+5; j++){
+                        for(int i = 0; i <= plateNumbers.length-1; i = i+5){
+                            for(int j = 0; j <= i+5; j++){
                                 if(!plateNumbers[i]){
-                                    winner = true;
+                                    winner = false;
                                     break;
                                 }
                             }
