@@ -71,7 +71,7 @@ public class BankoGame implements CheckingForWins{
                 counter++;
         }
         for (boolean plateNumber : plateNumbers) {
-            System.out.print(plateNumber);
+            System.out.print(plateNumber + " ");
         }
         while(!success) {
             try {
@@ -88,7 +88,9 @@ public class BankoGame implements CheckingForWins{
                         }
                         success = true;
                     case 2:
+                        for(int i = 0; i <= plateNumbers.length-1; i = i +5){
 
+                        }
                         success = true;
                     case 3:
 
