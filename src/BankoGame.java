@@ -1,14 +1,13 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class BankoGame implements CheckingForWins{
     public static void main(String[] args) {
         BankoGame bg = new BankoGame();
+        BankBoardPrinter printer = new BankBoardPrinter();
         BankoBoardGenerator bbg = new BankoBoardGenerator();
-        ArrayList<Integer> bankoBoards = new ArrayList<>(bbg.bankNumbersGenerator(50));
-        ArrayList<Boolean> bankoBoardCheck = new ArrayList<>(Collections.nCopies(bankoBoards.size(), false));
+        ArrayList<Integer> bankoNumbers = new ArrayList<>(bbg.bankNumbersGenerator(50));
+        ArrayList<Boolean> bankoBoardCheck = new ArrayList<>(Collections.nCopies(bankoNumbers.size(), false));
+        HashMap<Integer, String> bankoBoards = new HashMap<>(bbg.gameBoards(bankoNumbers));
         ArrayList<Integer> drawnNumbers = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
@@ -26,9 +25,9 @@ public class BankoGame implements CheckingForWins{
                             if (drawnNumbers.size() == 0 || !drawnNumbers.contains(entry)) {
                                 drawnNumbers.add(entry);
                                 System.out.println(entry);
-                                if (bankoBoards.contains(entry)) {
-                                    for (int i = 0; i < bankoBoards.size(); i++) {
-                                        if (bankoBoards.get(i).equals(entry)) {
+                                if (bankoNumbers.contains(entry)) {
+                                    for (int i = 0; i < bankoNumbers.size(); i++) {
+                                        if (bankoNumbers.get(i).equals(entry)) {
                                             bankoBoardCheck.set(i, true);
                                         }
                                     }
@@ -44,6 +43,7 @@ public class BankoGame implements CheckingForWins{
                         boolean winner = bg.checkBooleans(callerID, bankoBoardCheck);
                         if(winner){
                             System.out.println(callerID + " is a winner.");
+                            printer.printWinner(bankoBoards.get(callerID));
                             break;
                         }
                         System.out.println("Not a winner.");
@@ -70,9 +70,6 @@ public class BankoGame implements CheckingForWins{
                 plateNumbers[counter] = list.get(i);
                 counter++;
         }
-        for (boolean plateNumber : plateNumbers) {
-            System.out.print(plateNumber + " ");
-        }
         System.out.println("");
         while(!success) {
             try {
@@ -90,13 +87,27 @@ public class BankoGame implements CheckingForWins{
                         success = true;
                         break;
                     case 2:
-                        for(int i = 0; i <= plateNumbers.length-1; i = i +5){
-
+                        for(int i = 0; i <= 9; i++){
+                            if (!plateNumbers[i]){
+                                winner = false;
+                                break;
+                            }
+                        }
+                        for(int i = 5; i <= 14; i++){
+                            if (!plateNumbers[i]) {
+                                winner = false;
+                                break;
+                            }
                         }
                         success = true;
                         break;
                     case 3:
-
+                        for(int i = 0; i <= plateNumbers.length; i++){
+                            if(!plateNumbers[i]){
+                                winner = false;
+                                break;
+                            }
+                        }
                         success = true;
                         break;
                 }

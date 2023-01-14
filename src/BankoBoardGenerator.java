@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Random;
 
 public class BankoBoardGenerator {
@@ -66,5 +67,20 @@ public class BankoBoardGenerator {
             }
         }
         return success;
+    }
+    public HashMap<Integer, String> gameBoards(ArrayList<Integer> input){
+        HashMap<Integer, String> map = new HashMap<>();
+        ArrayList<Integer> temp = new ArrayList<>();
+        String tempStr = "";
+        int counter = 0;
+        for(int i = 0; i <= input.size()-1; i = i+15){
+            for(int j = 0; j <= 14; j++){
+                tempStr += input.get(i + j) + " ";
+            }
+            map.put(counter, tempStr);
+            tempStr = "";
+            counter++;
+        }
+        return map;
     }
 }
