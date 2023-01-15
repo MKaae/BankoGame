@@ -76,12 +76,18 @@ public class BankoGame implements CheckingForWins{
                 int select = Integer.parseInt(sc.next());
                 switch(select){
                     case 1:
+                        int counter1 = 0;
                         for(int i = 0; i <= plateNumbers.length-1; i = i+5){
+                            if(counter1 == 5 && i != 0) {
+                                success = true;
+                                break;
+                            }
                             for(int j = 0; j <= 4; j++){
-                                System.out.println(plateNumbers[i+j]);
                                 if(!plateNumbers[i+j]){
                                     winner = false;
+                                    counter1 = 0;
                                 }
+                                counter1++;
                             }
                         }
                         success = true;
@@ -102,7 +108,7 @@ public class BankoGame implements CheckingForWins{
                         success = true;
                         break;
                     case 3:
-                        for(int i = 0; i <= plateNumbers.length; i++){
+                        for(int i = 0; i <= plateNumbers.length-1; i++){
                             if(!plateNumbers[i]){
                                 winner = false;
                                 break;

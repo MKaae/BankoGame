@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b04fc63-1400-4e04-9bca-74858d796518" name="Changes" comment="Fixed first checklist for calledID">
+    <list default="true" id="3b04fc63-1400-4e04-9bca-74858d796518" name="Changes" comment="Everything complete except board prints.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankoBoardGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankoBoardGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BankBoardPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankBoardPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BankoGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankoGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankBoardPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankBoardPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CheckingForWins.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckingForWins.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
@@ -51,7 +53,9 @@
       <workItem from="1673184300803" duration="14101000" />
       <workItem from="1673429997408" duration="2174000" />
       <workItem from="1673434414533" duration="94000" />
-      <workItem from="1673636362750" duration="3698000" />
+      <workItem from="1673636362750" duration="9094000" />
+      <workItem from="1673732830383" duration="760000" />
+      <workItem from="1673785184327" duration="1723000" />
     </task>
     <task id="LOCAL-00001" summary="FirstIteration">
       <created>1673120038537</created>
@@ -137,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673636371889</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Everything complete except board prints.">
+      <created>1673727275037</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673727275037</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +173,8 @@
     <MESSAGE value="making checklists" />
     <MESSAGE value="Completed number generator for bankogame with checks and list" />
     <MESSAGE value="Fixed first checklist for calledID" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed first checklist for calledID" />
+    <MESSAGE value="Everything complete except board prints." />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything complete except board prints." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
